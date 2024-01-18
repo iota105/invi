@@ -1,0 +1,26 @@
+run them on vs code terminal after opening the project  folder in vs code
+
+USE THESE ONLY IF ECP/ENV R NOT CREATED/FOUND
+	virtualenv env
+	env\scripts\activate
+
+AFTER CREATING ecp/env WRITE BELOW COMMANDS OUTSIDE (ecp/env)
+pip install -r requirements.txt 
+python manage.py makemigrations inventory
+python manage.py migrate inventory
+python manage.py makemigrations transactions
+python manage.py migrate transactions
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser  (to create login account)
+python manage.py runserver
+
+
+
+
+
+ **if ecp is not runnig because of error that scripts is disabled then : 
+
+set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Get-ExecutionPolicy
+Get-ExecutionPolicy -list
